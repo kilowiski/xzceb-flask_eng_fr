@@ -12,6 +12,11 @@ class TestFrenchToEnglish(unittest.TestCase):
         translate bonjour(fr>en)
         '''
         self.assertEqual(french_to_english('bonjour'.upper()), 'hello'.upper())
+    def test_french_to_english_neqnull(self):
+        '''
+        check no null returned
+        '''
+        self.assertNotEqual(french_to_english('bonjour'.upper()), "")
     def test_null(self):
         '''
         null test
@@ -26,6 +31,11 @@ class TestEnglishToFrench(unittest.TestCase):
         translate hello (en>fr)
         '''
         self.assertEqual(english_to_french('hello'.upper()), 'bonjour'.upper())
+    def test_english_to_french_neqnull(self):
+        '''
+        check no null returned
+        '''
+        self.assertNotEqual(english_to_french('hello'.upper()), "")
     def test_null(self):
         '''
         null test
